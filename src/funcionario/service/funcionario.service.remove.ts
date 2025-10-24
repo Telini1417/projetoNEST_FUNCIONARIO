@@ -12,7 +12,6 @@ export class FuncionarioServiceRemove{
   ){}
 
   async remove(id:number){
-    // Buscar o serviço antes de deletar para confirmar que existe
     const funcionario = await this.funcionarioRepository.findOne({
       where: { funcionarioId: id }
     });

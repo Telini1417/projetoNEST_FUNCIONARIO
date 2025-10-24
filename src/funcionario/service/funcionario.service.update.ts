@@ -17,7 +17,6 @@ export class FuncionarioServiceUpdate{
 
     const funcionario = ConverterFuncionario.toFuncionario(funcionarioRequest);
 
-    // Buscar o serviço existente
     const existingFuncionario = await this.funcionarioRepository.findOne({
       where: { funcionarioId: id }
     });
@@ -26,7 +25,6 @@ export class FuncionarioServiceUpdate{
       throw new Error('Funcionário não encontrado');
     }
 
-    // Atualizar os dados mantendo o createdAt
     const updatedFuncionario = {
       ...existingFuncionario,
       ...funcionario,
