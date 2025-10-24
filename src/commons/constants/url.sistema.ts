@@ -25,7 +25,7 @@ function gerarRotasSistema(entity: string) {
 }
 
 export const ROUTE = {
-  SERVICO: gerarRotasSistema(FUNCIONARIO),
+  FUNCIONARIO: gerarRotasSistema(FUNCIONARIO),
 };
 
 //criar rotas de forma dinâmica para os endpoints

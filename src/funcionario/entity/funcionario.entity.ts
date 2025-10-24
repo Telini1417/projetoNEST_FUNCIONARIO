@@ -17,17 +17,23 @@ export class Funcionario extends BaseEntity {
   nome: string = '';
 
   @Column({
-    name: 'DESCRICAO',
+    name: 'EMAIL',
     type: 'varchar2',
     length: 50,
   })
-  descricao: string = '';
+  email: string = '';
 
   @Column({
-    name: 'VALOR',
+    name: 'SENHA',
+    type: 'varchar2',
+  })
+  senha: string = '';
+
+  @Column({
+    name: 'ATIVO',
     type: 'number',
   })
-  valor: number = 0;
+  ativo: number = 1;
 
   constructor(data: Partial<Funcionario> = {}) {
     super();

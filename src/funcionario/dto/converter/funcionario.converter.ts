@@ -12,8 +12,9 @@ export class ConverterFuncionario{
       funcionario.funcionarioId = funcionarioRequest.funcionarioId;
     }
     funcionario.nome = funcionarioRequest.nome;
-    funcionario.descricao = funcionarioRequest.descricao;
-    funcionario.valor = funcionarioRequest.valor;
+    funcionario.email = funcionarioRequest.email;
+    funcionario.senha = funcionarioRequest.senha;
+    funcionario.ativo = funcionarioRequest.ativo;
 
     return funcionario;
   }
@@ -22,8 +23,9 @@ export class ConverterFuncionario{
 
     const funcionarioResponse = new FuncionarioResponse();
     funcionarioResponse.funcionarioId = funcionario.funcionarioId ?? 0;
-    funcionarioResponse.descricao = funcionario.descricao;
-    funcionarioResponse.valor = funcionario.valor;
+    funcionarioResponse.ativo = funcionario.ativo;
+    funcionarioResponse.senha = funcionario.senha;
+    funcionarioResponse.email = funcionario.email;
     funcionarioResponse.nome = funcionario.nome;
 
     return funcionarioResponse;

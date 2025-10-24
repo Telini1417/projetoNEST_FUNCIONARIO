@@ -1,6 +1,7 @@
 export class FuncionarioResponse {
-  funcionarioId: number = 0;
+  funcionarioId?: number;
   nome: string = '';
-  descricao: string = '';
-  valor: number = 0;
+  email: string = '';
+  senha: string = '';
+  ativo: number = 1;
 }
